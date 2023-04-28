@@ -1,0 +1,32 @@
+.blog_page_featured_article{
+    height: 35rem;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog_page_featured_article_box{
+    height: 35rem;
+    width: 80rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog_page_featured_article_image{
+    width: 75%;
+    height: auto;
+    height: 30rem;
+    border-radius: 2rem 0 0 2rem;
+}
+
+.blog_page_featured_article_textbox{
+    background-color: chocolate;
+    width: auto;
+    height: auto;
+    height: 30rem;
+    width: 35rem;
+    border-radius: 0 2rem 2rem 0;
+    padding: 2rem;
+}

@@ -1,0 +1,89 @@
+
+
+
+/* Hamburgermenü */
+#hamburgerm{
+    display: flex;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+#image{
+    height: 40px
+}
+
+label.hamburg { 
+    display: block;
+    background: rgba(255, 255, 255, 0); width: 75px; height: 50px; 
+    position: relative; 
+    margin-left: auto; margin-right: auto;
+    border-radius: 4px; 
+    cursor: pointer;
+ }
+ 
+ input#hamburg {display:none}
+
+ .line { 
+    position: absolute; 
+    left:10px;
+    height: 4px; width: 45px; 
+    background: #ffffff; border-radius: 2px;
+    display: block; 
+    transition: 0.5s; 
+    transform-origin: center; 
+ }
+ 
+ .line:nth-child(1) { top: 18px; }
+ .line:nth-child(2) { top: 30px; }
+
+
+
+ @keyframes toggle_animation_1 {
+    from {
+        transform: translateY(0) rotate(0deg);
+      }
+    
+      to {
+        transform: translateY(6px) rotate(-45deg);
+      }
+  }
+ 
+  @keyframes toggle_animation_2 {
+    from {
+        transform: translateY(0) rotate(0deg);
+      }
+    
+      to {
+        transform: translateY(-6px) rotate(45deg);;
+      }
+  }
+
+  @keyframes toggle_animation_1_reversed {
+    from {
+        transform: translateY(6px) rotate(-45deg);
+      }
+    
+      to {
+        transform: translateY(0px) rotate(0deg);
+      }
+  }
+ 
+  @keyframes toggle_animation_2_reversed {
+    from {
+        transform: translateY(-6px) rotate(45deg);;
+      }
+    
+      to {
+        transform: translateY(0px) rotate(0deg);;
+      }
+  }
+
+ 
+@media only screen and (max-width: 600px) {
+    #hamburgerm{
+        display: block;
+    }
+}

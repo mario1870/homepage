@@ -1,0 +1,105 @@
+
+
+.navbar{
+    position: fixed;
+    top: 0;
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+    z-index: 10;
+    background-color: rgb(0, 0, 0);
+}
+
+.navbar_logo_div{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar_logo_id{
+    width: auto;
+    height: 80%;
+    filter: invert(100%);
+}
+
+.navbar_links_div{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.3rem;
+}
+
+.navbar_links_div_text_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    font-family: sans-serif;
+    color: white;
+}
+
+.navbar_links_div_text_div::before, .navbar_links_div_text_div::after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 20px;
+    background-color: black;
+    margin: 0 10px;
+    /* Anpassen von Breite, Farbe und Abstand nach Bedarf */
+  }
+
+  div:hover::before, div:hover::after {
+    background-color: rgb(255, 255, 255); /* Farbe der Balken, wenn über das div gehovert wird */
+  }
+
+.navbar_languages_div{
+    position: absolute;
+    right: 1rem;
+    top: calc(100vh - 3rem);
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar_logo_div_flag{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 0 5px 1px white;
+}
+.navbar_logo_div_flag:hover{
+    cursor: pointer;
+}
+
+
+.hamburgermenu_component{
+    z-index: 1;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .navbar{
+        padding-right: 0rem;
+    }
+    .navbar_links_div{
+        display: none;
+    }
+
+    #hamburgerm{
+        display: block;
+    }
+
+    .navbar_logo_div_flag{
+        display: none;
+    }
+}
