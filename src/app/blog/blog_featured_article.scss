@@ -10,23 +10,34 @@
     height: 35rem;
     width: 80rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
 .blog_page_featured_article_image{
-    width: 75%;
+    width: 100%;
     height: auto;
     height: 30rem;
-    border-radius: 2rem 0 0 2rem;
+    border-radius: 2rem;
+    position: absolute;
+    width: 80rem;
+    z-index: 1;
 }
 
+
 .blog_page_featured_article_textbox{
-    background-color: chocolate;
+    background-color: rgba(210, 105, 30, 0.76);
     width: auto;
     height: auto;
-    height: 30rem;
-    width: 35rem;
+    height: 29rem;
+    width: 25rem;
     border-radius: 0 2rem 2rem 0;
     padding: 2rem;
+    z-index: 4;
+    position: relative;
+    margin: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
 }

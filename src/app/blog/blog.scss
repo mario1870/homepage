@@ -71,11 +71,23 @@
     background-color: rgb(255, 255, 255);
     height: 15rem;
     border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .blog_page_all_articles_article:hover{
     box-shadow: 0 0 10px 2px white;
     height: 15rem;
+    border-radius: 1rem;
+}
+
+.blog_page_all_articles_box_image{
+    width: auto;
+    height: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    height: 13rem;
     border-radius: 1rem;
 }
 
