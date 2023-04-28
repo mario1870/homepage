@@ -1,13 +1,12 @@
 "use client"
 import "./startpage.scss"
 import Image from "next/image"
-import { startpage_data_leftCircle, startpage_data_short } from "../../../../data/startpage_data"
+import { startpage_data } from "../../../../data/startpage_data"
 import { useSelector, useDispatch } from 'react-redux';
 import TypewriterText from "../animations/schreibmaschine"
 import { motion } from "framer-motion"
 import Link from "next/link";
 import Typewriter from "./typewriter"
-import { useEffect, useState } from "react";
 
 export default function Startpage(props){
 
@@ -19,6 +18,9 @@ export default function Startpage(props){
           .then(data => console.log(data))
           .catch(error => console.error(error));
       }
+
+      const text_deutsch = startpage_data.text_deutsch
+      const text_english = startpage_data.text_english
 
     return(
         <>
@@ -32,15 +34,15 @@ export default function Startpage(props){
                 <div className="startpage-content-name">
                     <div className="startpage-content-name-box">
                         <motion.h6 className="startpage-content-name-title" initial={{ y: '100%', opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: '100%', opacity: 0 }} transition={{ opacity: { duration: 0.5 } }}>
-                            HEY, I'M
+                            <p>{language === "german" ? text_deutsch.first : text_english.first}</p>
                         </motion.h6>
                         <motion.div className="startpage-content-name-name" initial={{ y: '100%', opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: '100%', opacity: 0 }} transition={{ opacity: { duration: 0.5 } }}>
-                            MARIO RAACH,
+                            <p>{language === "german" ? text_deutsch.second : text_english.second}</p>
                         </motion.div>
 
                         <motion.div className="startpage-content-subheader" initial={{ y: '100%', opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: '100%', opacity: 0 }} transition={{ opacity: { duration: 0.5 } }}>
                             <h3 onClick={fetchData} className="startpage-content-subheader-text">
-                                <Typewriter text="I'M AN INDUSTRIAL CLERK WHOS INTERESTED IN COMPUTER SCIENCE, SOCCER AND POLITICS. I HOPE YOU ENJOY THE CONTENT ON MY WEBSITE!" />
+                                <Typewriter text={language === "german" ? text_deutsch.text : text_english.text} />
                             </h3>              
                         </motion.div>
                     </div>

@@ -4,6 +4,7 @@ import "./blog.scss"
 import { useSelector, useDispatch } from 'react-redux';
 import Image from "next/image";
 import Blog_featured_article from "./blog_featured_article"
+import FollowMe from "./follow_me_section"
 
 export default function Blog(){
 
@@ -14,7 +15,7 @@ export default function Blog(){
             <div className="blog_page">
                 <div className="blog_page_header">
                     <div className="blog_page_header_box"> 
-                        <div className="blog_page_header_firstline"><p>BLOG VON MARIO</p><p>FOLGE MIR</p></div>
+                        <div className="blog_page_header_firstline"><p>BLOG VON MARIO</p><FollowMe /></div>
                         <div className="blog_page_header_headline">HEADLINE</div>
                         <div className="blog_page_header_subheadline">SUBHEADLINE</div>
                     </div>

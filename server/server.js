@@ -19,54 +19,53 @@ connection.connect((err) => {
     }
     console.log('Connected to database with id ' + connection.threadId);
   });
-  
 
-
-
-
-
-  
-
-
-
-
-
-app.get("/register", (req, res) => {
-    connection.query('SELECT * FROM users', (error, results, fields) => {
+app.get("/api", (req, res) => {
+    connection.query('SELECT * FROM user_table', (error, results, fields) => {
         if (error) throw error;
         res.send(results);
       });
 })  
 
 
-app.get("/insert", (req, res) => {
+app.post("/insert", (req, res) => {
+
+  const { username, email, passwort } = req.body;
+
   const data = {
-    username: 'John Doe',
-    mail: 'johndoe@example.com',
+    username: username,
+    email: email,
+    password: passwort,
   };
 
-  connection.query('INSERT INTO users SET ?', data, (error, result) => {
+
+
+  connection.query('INSERT INTO user_table SET ?', data, (error, result) => {
     if (error) throw error;
     console.log('Daten erfolgreich eingefügt');
     res.send('Daten erfolgreich eingefügt'); // Antwort an den Browser senden
   });
+
+  res.json(username);
 });
 
 
 
-// Body-Parser konfigurieren
-app.use(bodyParser.urlencoded({ extended: true }));
 
-// Formular-Route definieren
-app.post('/formular', (req, res) => {
-  const { name, email, message } = req.body;
 
-    console.log(name)
 
-  res.send(
-    ""
-  )
+app.post('/login', function(req, res) {
+  var username = req.body.username;
+  console.log(username)
+  // Verarbeiten Sie den Benutzernamen hier
 });
+
+
+
+
+
+
+
 
 
 

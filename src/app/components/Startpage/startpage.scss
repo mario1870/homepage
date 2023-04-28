@@ -11,7 +11,7 @@
 }
 
 .startpage-content{
-  width: 80%;
+  width: 60%;
   height: 40rem;
   display: flex;
   justify-content: center;
@@ -28,10 +28,6 @@
   font-size: 5rem;
   color: azure;
   font-family: Arial, Helvetica, sans-serif;
-  background-image: linear-gradient(to right, #ffffff, #0000ff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
 
 }
 
@@ -50,6 +46,10 @@
 
 .startpage-content-name-name{
   height: 5rem;
+  background-image: linear-gradient(to right, #0000ff, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .startpage-content-subheader{
@@ -185,7 +185,6 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-
 }
 
 .startpage-content-name-box{
@@ -203,8 +202,10 @@
 
 .startpage-content-name-name{
   height: 2rem;
-color: aqua;
-background-color: #0000ff;
+  background-image: linear-gradient(to right, #ffffff, #0000ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .startpage-content-subheader{
@@ -228,15 +229,14 @@ background-color: #0000ff;
 }
 
 .startpage-content-image{
-  width: 75%;
-  height: 100%;
+  width: 65%;
   display: flex;
   justify-content: flex-start;
-  align-items: flex-end;
+  align-items: center;
 }
 
 #startpage-content-image-img{
-  width: 18rem;
+  width: 21rem;
   height: auto;
 }
 
