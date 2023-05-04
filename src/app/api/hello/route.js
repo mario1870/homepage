@@ -5,7 +5,7 @@
 //}
 
 
-import db from "../../../../server/db"
+import db from "../../../../server/server"
 
 
 export async function handler(req, res) {

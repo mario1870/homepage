@@ -1,18 +1,37 @@
 
-
+import "./login.scss"
 
 
 export default function Server(){
     
 
     return(
-        <div style={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center"}}>
-            <form id="contact_page_form" className="topBefore" action="http://localhost:8000/insert" method="post">
-                <input id="contact_page_form_name" type="text" name="name" placeholder="Username" />
-                <input id="contact_page_form_email" type="text" name="email" placeholder="passwort" />
-                <textarea id="message" type="text" name="message" placeholder="passwort"></textarea>
-                <input id="contact_page_form_submit" type="submit" value="Abschicken" />
-            </form>
+        <div style={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column"}}>
+
+            <div class="main">  	
+                <input type="checkbox" id="chk" aria-hidden="true" />
+
+                    <div class="signup">
+                        <form id="contact_page_form" className="topBefore" action="http://localhost:8000/signup" method="post">
+                            <label for="chk" aria-hidden="true">Sign up</label>
+                            <input type="text" name="username" placeholder="Username" required="" />
+                            <input type="email" name="email" placeholder="Email" required="" />
+                            <input type="password" name="password" placeholder="Password" required="" />
+                            <button  type="submit">Sign up</button>
+                        </form>
+                    </div>
+
+                    <div class="login">
+                        <form id="contact_page_form" className="topBefore" action="http://localhost:8000/login" method="post">
+                            <label for="chk" aria-hidden="true">Login</label>
+                            <input type="email" name="email" placeholder="Email" required="" />
+                            <input type="password" name="password" placeholder="Password" required="" />
+                            <button>Login</button>
+                        </form>
+                    </div>
+            </div>
+
+
         </div>
     )
 }
