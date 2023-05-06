@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import { store } from "./redux/store"
 import { CookiesProvider } from 'react-cookie';
 import { motion } from 'framer-motion'
+import AuthProvider from './AuthProvider'
 export const metadata = {
   title: 'Personal Website - Mario Raach',
   description: 'Personal Webiste of Mario Raach from Germany',
@@ -17,15 +18,17 @@ export default function RootLayout({
 }) {
 
   return (
-    <html lang="en">
-      <body>
-        <Provider store={store}>
-          <CookiesProvider>
-            <Navbar  />
-            {children}  
-          </CookiesProvider>
-        </Provider>
-      </body>
-    </html>
+    <AuthProvider>
+      <html lang="en">
+        <body>
+          <Provider store={store}>
+            <CookiesProvider>
+              <Navbar  />
+              {children}  
+            </CookiesProvider>
+          </Provider>
+        </body>
+      </html>
+    </AuthProvider>
   )
 }

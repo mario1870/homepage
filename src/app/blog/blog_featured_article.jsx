@@ -1,4 +1,4 @@
-"use client"
+
 import Image from "next/image"
 import "./blog_featured_article.scss"
 
