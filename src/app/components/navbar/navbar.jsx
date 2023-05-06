@@ -8,6 +8,19 @@ import { useSelector, useDispatch } from 'react-redux';
 import { set_german, set_english } from '../../redux/languageSlice';
 import { motion, AnimatePresence } from "framer-motion";
 
+const icon = {
+    hidden: {
+      opacity: 0,
+      pathLength: 0,
+      fill: "rgba(255, 255, 255, 0)"
+    },
+    visible: {
+      opacity: 1,
+      pathLength: 1,
+      fill: "rgba(255, 255, 255, 1)"
+    }
+  };
+
 
 export default function Navbar(props){
 
@@ -28,6 +41,13 @@ export default function Navbar(props){
 
             {/*Logo*/}
             <div className="navbar_logo_div">
+
+
+
+
+
+
+
                 <motion.div whileHover={{ scale: 1.1}} whileTap={{scale: 0.9}} id="navbar_logo_id">
                     <Link className="" href="" id="navbar_logo_id" ><Image src="/navbar_images/m_logo.png" width={592} height={421} alt="logo" id="navbar_logo_id" loading="lazy" /></Link>
                 </motion.div>

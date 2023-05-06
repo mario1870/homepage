@@ -2,6 +2,7 @@
 import Image from "next/image"
 import "./cv_page.scss"
 import { useSelector, useDispatch } from 'react-redux';
+import Component  from "../components/buttons";
 
 
 export default function Cv_page(){
@@ -19,6 +20,9 @@ export default function Cv_page(){
             <a href="/greece.pdf" download>
                 <button>PDF herunterladen</button>
             </a>
+
+            <Component />
+
 
 
             </div>
