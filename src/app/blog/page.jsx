@@ -2,15 +2,15 @@
 import "./blog.scss"
 import { useSelector, useDispatch } from 'react-redux';
 import Image from "next/image";
-import Blog_featured_article from "./blog_featured_article"
+import Blog_featured_article from "./(featured_article)/blog_featured_article"
 import FollowMe from "./follow_me_section"
 import { data_blog } from "../../../data/data_blog"
+import LoadMoreButton from "./(load_more_button)/load_more"
 
 export default function Blog(){
 
     const language = useSelector(state => state.language.value);
 
-    console.log(data_blog);
 
 
     return (
@@ -35,7 +35,9 @@ export default function Blog(){
                     </div>
 
                 </div>                    
-                <div className="blog_page_all_articles_loadingbutton"> <button>Load more</button> </div>  
+                <div className="blog_page_all_articles_loadingbutton"> 
+                <LoadMoreButton />
+                </div>  
             </div>
         </>
     )

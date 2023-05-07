@@ -41,19 +41,10 @@ export default function Navbar(props){
 
             {/*Logo*/}
             <div className="navbar_logo_div">
-
-
-
-
-
-
-
                 <motion.div whileHover={{ scale: 1.1}} whileTap={{scale: 0.9}} id="navbar_logo_id">
                     <Link className="" href="" id="navbar_logo_id" ><Image src="/navbar_images/m_logo.png" width={592} height={421} alt="logo" id="navbar_logo_id" loading="lazy" /></Link>
                 </motion.div>
             </div>
-
-
 
             <AnimatePresence>
                 {hamburgerState && (

@@ -1,6 +1,8 @@
 "use client"
 import { createSlice } from '@reduxjs/toolkit';
 
+// 
+
 const hamburgerSlice = createSlice({
   name: 'hamburger',
 
@@ -10,8 +12,7 @@ const hamburgerSlice = createSlice({
   reducers: {
     setChange: state => {
         if (state.value != undefined){
-        state.value = !state.value;
-        console.log(state.value)            
+        state.value = !state.value;        
         }
         else{
             state.value = true;
