@@ -1,6 +1,6 @@
 
 .cv_page{
-    background-color: bisque;
+    background-color: rgb(0, 0, 0);
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -42,14 +42,14 @@
   }
   
   .top, .bottom {
-    background: #222;
+    background: #ffffff;
     display: block;
     height: 40px;
     width: 180px; 
     margin: -50px 0 0 10px;
     text-align: center;
     font: 12px/45px Helvetica, Verdana, sans-serif;
-    color: #fff;
+    color: #000000;
     position: absolute;
     z-index: -1;
     -webkit-border-radius: 5px;
