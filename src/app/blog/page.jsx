@@ -11,6 +11,8 @@ export default function Blog(){
 
     const language = useSelector(state => state.language.value);
 
+    
+
     return (
         <>
             <div className="blog_page">
@@ -24,13 +26,10 @@ export default function Blog(){
 
                 <Blog_featured_article headline="HEAD" />
 
-                <div className="blog_page_all_articles">
-                    <div className="blog_page_all_articles_box">
+ 
+                <Articles_preview />
 
-                        <Articles_preview />
-
-                    </div>
-                </div>                    
+                   
                 <div className="blog_page_all_articles_loadingbutton"> 
                     <LoadMoreButton />
                 </div>  

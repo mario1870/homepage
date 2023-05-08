@@ -3,7 +3,8 @@ import { useState, useEffect } from "react"
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Suspense } from 'react';
-import Loading_articles_preview from "./loading"
+import Article_preview_skeleton from "./article_preview_skeleton"
+import "./articles_preview.scss"
 
 export default function Articles_preview(){
 
@@ -24,21 +25,24 @@ export default function Articles_preview(){
 
   return(
     <>
-    {isLoading ? (<Loading_articles_preview />) : (
-      data.map((item, index) => (
-        <div key={index} className="blog_page_all_articles_article">
-          <h3>
-            {item.headline}
-          </h3>
-          <p>
-            {index}
-          </p>
-          <Image className="blog_page_all_articles_box_image" src={item.image} width={100} height={100} alt="refresh to load" />
+    {isLoading ? (<Article_preview_skeleton />) : (
+      <div className="blog_page_all_articles">
+        <div className="blog_page_all_articles_box">
+
+        {data.slice(-6).map((item, index) => (
+          <div key={index} className="blog_page_all_articles_article">
+            <h3>{item.headline}</h3>
+            <p>{index}</p>
+            <Image className="blog_page_all_articles_box_image" src={item.image} width={100} height={100} alt="refresh to load" />
+          </div>
+        ))}
+
         </div>
-      ))     
+      </div>
     )}
-
-
     </>
   )
 }
+
+
+

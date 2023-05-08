@@ -6,6 +6,7 @@ import { store } from "./redux/store"
 import { CookiesProvider } from 'react-cookie';
 import { motion } from 'framer-motion'
 import { SessionProvider } from "next-auth/react";
+import { SkeletonTheme } from "react-loading-skeleton";
 
 export const metadata = {
   title: 'Personal Website - Mario Raach',
@@ -16,6 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
+      <SkeletonTheme baseColor="#d9d9d9">
         <SessionProvider>
           <Provider store={store}>
             <CookiesProvider>
@@ -24,6 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </CookiesProvider>
           </Provider>
         </SessionProvider>
+        </SkeletonTheme>
       </body>
     </html>
   );
