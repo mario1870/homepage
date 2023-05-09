@@ -3,7 +3,7 @@ import Image from "next/image"
 import "./cv_page.scss"
 import { useSelector, useDispatch } from 'react-redux';
 
-
+import Component from "./component"
 
 
 export default function Cv_page(){
@@ -25,7 +25,7 @@ export default function Cv_page(){
             </div>
 
 
-
+            <Component />
 
             </div>
         </>

@@ -31,9 +31,14 @@ export default function Articles_preview(){
 
         {data.slice(-6).map((item, index) => (
           <div key={index} className="blog_page_all_articles_article">
-            <h3>{item.headline}</h3>
-            <p>{index}</p>
-            <Image className="blog_page_all_articles_box_image" src={item.image} width={100} height={100} alt="refresh to load" />
+            <span className="blog_page_all_articles_article_span">
+              <h3 className="blog_page_all_articles_article_headline">{item.headline}</h3>
+              <p className="blog_page_all_articles_article_span_p">{index}</p>              
+            </span>
+
+            <span className="blog_page_all_articles_article_spanimg">
+              <Image className="blog_page_all_articles_box_image" src={item.image} width={100} height={100} alt="refresh to load" />
+            </span>
           </div>
         ))}
 
