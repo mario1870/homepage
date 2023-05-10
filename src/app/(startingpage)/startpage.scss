@@ -178,7 +178,8 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  font-size: 2rem;
+  font-size: 6rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: azure;
   font-family: Arial, Helvetica, sans-serif;
   background-image: linear-gradient(to right, #ffffff, #0000ff);
@@ -191,21 +192,42 @@
   width: 90vw;
   display: flex;
   flex-direction: column;
+  height: auto;
 }
 
 .startpage-content-name-title{
-  background-image: linear-gradient(to right, #0000ff, #ffffff);
+  background-image: linear-gradient(to right, #0000ff00, #ffffff59);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  display: flex;
+  justify-content: center;
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  z-index: 0;
+  position: absolute;
+  top: 30%;
+  margin: 0;
+  padding: 0;
 }
 
 .startpage-content-name-name{
-  height: 2rem;
-  background-image: linear-gradient(to right, #ffffff, #0000ff);
+  height: auto;
+  width: 100vw;
+  background-image: linear-gradient(to right, #ffffff00, #0e040400);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 8rem;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  z-index: 0;
+  position: absolute;
+  top: 30%;
+
 }
 
 .startpage-content-subheader{
@@ -220,6 +242,7 @@
   color: azure;
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
+
 }
 
 .startpage-content-subheader-text{
@@ -231,13 +254,17 @@
 .startpage-content-image{
   width: 65%;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-end;
+  margin-left: 2rem;
+  z-index: 5;
 }
 
 #startpage-content-image-img{
-  width: 21rem;
+  width: 15rem;
   height: auto;
+  display: flex;
+  align-items: flex-end;
 }
 
 

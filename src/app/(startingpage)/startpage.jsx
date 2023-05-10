@@ -40,11 +40,6 @@ export default function Startpage(props){
                             <p>{language === "german" ? text_deutsch.second : text_english.second}</p>
                         </motion.div>
 
-                        <motion.div className="startpage-content-subheader" initial={{ y: '100%', opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: '100%', opacity: 0 }} transition={{ opacity: { duration: 0.5 } }}>
-                            <h3 onClick={fetchData} className="startpage-content-subheader-text">
-                                <Typewriter text={language === "german" ? text_deutsch.text : text_english.text} />
-                            </h3>              
-                        </motion.div>
                     </div>
                 </div>
             </div>
