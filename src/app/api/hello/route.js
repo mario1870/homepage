@@ -1,5 +1,4 @@
 
-import { getServerSession } from 'next-auth';
 import { NextResponse } from "next/server"
 import { PrismaClient } from '@prisma/client'
 
@@ -8,22 +7,22 @@ export async function GET(){
 
   const prisma = new PrismaClient()
 
-  const data = [
-    {headline: "Coming Soon", text:"", image: "/coming_soon.jpg"},
-    {headline: "Coming Son", text:"", image: "/coming_soon.jpg"},
-    {headline: "Coming Sn", text:"", image: "/coming_soon.jpg"},
-    {headline: "Coming S", text:"", image: "/coming_soon.jpg"},
-    {headline: "Coming", text:"", image: "/coming_soon.jpg"},
-    {headline: "Coming", text:"", image: "/coming_soon.jpg"},
-    {headline: "Coming Soon", text:"", image: "/coming_soon.jpg"},
-    {headline: "Coming Son", text:"", image: "/coming_soon.jpg"},
-    {headline: "Coming Sn", text:"", image: "/coming_soon.jpg"},
-    {headline: "Coming S", text:"", image: "/coming_soon.jpg"},
-    {headline: "Coming", text:"", image: "/coming_soon.jpg"},
-    {headline: "Coming", text:"", image: "/coming_soon.jpg"},
-  ];
+  const newBlogpost = await prisma.blogpost.create({
+    data: {
+      title: 'New Blog Post',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      published: true,
+      authorId: 1,
+    },
+  });
 
-  const users = await prisma.user.findMany()
+  console.log('Created new blog post:', newBlogpost);
+}
+
+createBlogpost()
+  .catch((error) => console.error(error))
+  .finally(async () => await prisma.$disconnect());
+
 
   return NextResponse.json(data)
 }
