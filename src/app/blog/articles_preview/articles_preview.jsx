@@ -5,10 +5,14 @@ import Image from "next/image";
 import { Suspense } from 'react';
 import Article_preview_skeleton from "./article_preview_skeleton"
 import "./articles_preview.scss"
+import LoadMoreButton from "../(load_more_button)/load_more"
 
 export default function Articles_preview(){
 
+  // get Loadingstate
   const [isLoading, setIsLoading] = useState(true);
+  
+  const [shownArticles, setShownArticles] = useState(6)
 
   // fetch data for the small blog items
   const [data, setData] = useState([])
@@ -21,6 +25,11 @@ export default function Articles_preview(){
     }
     fetchData()
   }, [])
+  
+  useEffect(() => {
+    // aktualisiere data mit der neuen Anzahl an gezeigten Artikeln
+    setData(data.slice(-shownArticles));
+  }, [shownArticles]);
 
 
   return(
@@ -29,7 +38,7 @@ export default function Articles_preview(){
       <div className="blog_page_all_articles">
         <div className="blog_page_all_articles_box">
 
-        {data.slice(-6).map((item, index) => (
+        {data.slice(-shownArticles).map((item, index) => (
           <div key={index} className="blog_page_all_articles_article">
             <span className="blog_page_all_articles_article_span">
               <h3 className="blog_page_all_articles_article_headline">{item.headline}</h3>
@@ -45,6 +54,9 @@ export default function Articles_preview(){
         </div>
       </div>
     )}
+                <div className="blog_page_all_articles_loadingbutton"> 
+                <LoadMoreButton onClick={() => setShownArticles(shownArticles + 4)} />
+                </div>  
     </>
   )
 }

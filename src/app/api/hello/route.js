@@ -1,8 +1,12 @@
 
 import { getServerSession } from 'next-auth';
 import { NextResponse } from "next/server"
+import { PrismaClient } from '@prisma/client'
+
 
 export async function GET(){
+
+  const prisma = new PrismaClient()
 
   const data = [
     {headline: "Coming Soon", text:"", image: "/coming_soon.jpg"},
@@ -19,9 +23,10 @@ export async function GET(){
     {headline: "Coming", text:"", image: "/coming_soon.jpg"},
   ];
 
+  const users = await prisma.user.findMany()
+
   return NextResponse.json(data)
 }
-
 
 
 

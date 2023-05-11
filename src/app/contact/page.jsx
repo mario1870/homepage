@@ -31,17 +31,13 @@ export default function Contact(){
     return (
         <>
             <div className="contact_page">
-
                 <div className="contact_page_box">
-
                     <div className="contact_page_left">
                         <p>{language === "german" ? deutsch_text : english_text}</p>
                     </div>
-
                     <div className="contact_page_right">
                         <div>
                             <header>{language === "german" ? "KONTAKTIERE MICH" : "CONTACT ME"}</header>
-
                             <form id="contact_page_form" className="topBefore" action="http://localhost:8000/formular" method="post">
                                 <input id="contact_page_form_name" type="text" name="name" placeholder={language === "german" ? "NAME" : "NAME"} />
                                 <input id="contact_page_form_email" type="text" name="email" placeholder={language === "german" ? "E-MAIL" : "E-MAIL"} />
@@ -49,13 +45,8 @@ export default function Contact(){
                                 <input id="contact_page_form_submit" type="submit" value={language === "german" ? "ABSENDEN" : "SUBMIT"} />
                             </form>
                         </div>
-
-
                     </div>
-
                 </div>
-
-
             </div>
         </>
     )
