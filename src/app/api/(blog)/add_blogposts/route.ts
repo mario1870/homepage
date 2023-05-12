@@ -5,21 +5,19 @@ import { prisma } from "../../../../../lib/prisma";
 
 export async function POST(request: Request) {
   try {
-    const res = await request.json() // res now contains body
+    const res = await request.json()
 
-    console.log(request)
-    console.log("req")
-
-    const newUser = await prisma.user.create({
+    const newBlogpost = await prisma.blogpost.create({
       data: {
-        username: res.username,
-        email: res.email,
-        password: res.password,
+        title: res.title,
+        content: res.content,
+        published: true,
+        authorId: 1, 
       },
     });
 
 
-    return NextResponse.json(newUser);
+    return NextResponse.json(newBlogpost);
   } catch (error) {
     console.error(error);
     return NextResponse.json({err: "error"});
