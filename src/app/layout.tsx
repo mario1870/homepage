@@ -3,10 +3,8 @@ import './globals.css'
 import Navbar from "./components/navbar/navbar"
 import { Provider } from 'react-redux'
 import { store } from "./redux/store"
-import { SessionProvider, useSession } from "next-auth/react";
-import { Session } from "next-auth";
-import { motion } from 'framer-motion'
 import { SkeletonTheme } from "react-loading-skeleton";
+import AuthProvider from './AuthProvider'
 
 export const metadata = {
   title: 'Personal Website - Mario Raach',
@@ -18,6 +16,7 @@ export default function RootLayout(
   { children }: { children: React.ReactNode }
 ) {
   return (
+    <AuthProvider>
       <html lang="en">
         <body>
           <SkeletonTheme baseColor="#d9d9d9">
@@ -28,5 +27,6 @@ export default function RootLayout(
           </SkeletonTheme>
         </body>
       </html>
+    </AuthProvider>
   );
 }
