@@ -23,6 +23,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/components/navbar/hamburgermenu/hamburgermenu.jsx", "src/app/components/navbar/mobile_menu/mobile_menu.jsx", "src/app/cv/page.jsx", "src/app/contact/page.jsx", "src/app/blog/page.jsx", "data/startpage_data.js", "src/app/api/hello/route.js", "src/app/components/buttons.jsx", "src/app/layout.tsx", "src/app/api/auth/[...nextauth]/route.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/components/navbar/hamburgermenu/hamburgermenu.jsx", "src/app/components/navbar/mobile_menu/mobile_menu.jsx", "src/app/cv/page.jsx", "src/app/contact/page.jsx", "src/app/blog/page.jsx", "data/startpage_data.js", "src/app/api/hello/route.js", "src/app/components/buttons.jsx", "src/app/layout.tsx", "src/app/api/auth/[...nextauth]/route.js", "src/app/blog/[blogid]/page.jsx"],
   "exclude": ["node_modules"]
 }
