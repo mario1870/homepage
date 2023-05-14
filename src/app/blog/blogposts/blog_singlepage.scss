@@ -1,0 +1,39 @@
+
+
+
+.page{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+
+
+.blogpost_box{
+    background-color: bisque;
+    width: 80vw;
+    height: auto;
+    min-height: 30rem;
+    border-radius: 2rem;
+}
+
+.blogpost_title{
+    font-size: 4rem;
+    height: auto;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.blogpost_content{
+    font-size: 1.5rem;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 2rem;
+}

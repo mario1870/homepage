@@ -33,6 +33,7 @@ $form_hover_color: 'fff';
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .contact_page_right{
@@ -179,7 +180,7 @@ textarea:hover {
 
 .contact_page_left{
     width: 100vw;
-    height: 50vh;
+    height: 15vh;
     min-height: 0rem;
     padding-top: 3rem;
     margin: 0rem;
@@ -190,7 +191,9 @@ textarea:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aquamarine;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 3rem;
 }
 
 .contact_page_right{
@@ -243,7 +246,7 @@ header {
 input {
   font-family: 'Lato', sans-serif;
   font-size: 0.875em;
-  width: 470px;
+  width: 90vw;
   height: 50px;
   padding: 0px 15px 0px 15px;
   
@@ -265,8 +268,8 @@ input:hover {
 }
 
 textarea {
-  min-width: 470px;
-  max-width: 470px;
+  min-width: 90vw;
+  max-width: 90vw;
   min-height: 250px;
   max-height: 350px;
   padding: 15px;
@@ -310,9 +313,4 @@ textarea:hover {
 #submit:hover {
   color: #ffffff;
 }
-
-
-
-
-  
 }

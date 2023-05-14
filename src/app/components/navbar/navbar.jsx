@@ -8,18 +8,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { set_german, set_english } from '../../redux/languageSlice';
 import { motion, AnimatePresence } from "framer-motion";
 
-const icon = {
-    hidden: {
-      opacity: 0,
-      pathLength: 0,
-      fill: "rgba(255, 255, 255, 0)"
-    },
-    visible: {
-      opacity: 1,
-      pathLength: 1,
-      fill: "rgba(255, 255, 255, 1)"
-    }
-  };
 
 
 export default function Navbar(props){
@@ -30,12 +18,8 @@ export default function Navbar(props){
     
     const hamburgerState = useSelector(state => state.hamburger.value);
     
-    useEffect(() => {
-
-        console.log(hamburgerState)
-
-      }, [hamburgerState]);
-
+    const navbar_links = {}
+    
     return(
         <motion.nav className="navbar">
 
@@ -51,10 +35,10 @@ export default function Navbar(props){
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
                     {/* Links in der Mitte*/}
                     <div className="navbar_links_div" > 
-                        <motion.div whileHover={{ scale: 1.00}} whileTap={{scale: 0.9}}  className="navbar_links_div_text_div"><Link  href="">{language === "german" ? "Start" : "Home"}</Link></motion.div>
-                        <motion.div whileHover={{ scale: 1.0}} whileTap={{scale: 0.9}}  className="navbar_links_div_text_div"><Link href="/cv">{language === "german" ? "Lebenslauf" : "CV"}</Link></motion.div>
-                        <motion.div whileHover={{ scale: 1.0}} whileTap={{scale: 0.9}}  className="navbar_links_div_text_div"><Link href="/blog">{language === "german" ? "Blog" : "Blog"}</Link></motion.div>
-                        <motion.div whileHover={{ scale: 1.0}} whileTap={{scale: 0.9}}  className="navbar_links_div_text_div"><Link  href="/contact">{language === "german" ? "Kontakt" : "Contact"}</Link></motion.div>
+                        <motion.div whileHover={{ scale: 1.00}} whileTap={{scale: 0.9}} className="navbar_links_div_text_div"><Link onClick={() => { dispatch(setChange()) }} href="">{language === "german" ? "Start" : "Home"}</Link></motion.div>
+                        <motion.div whileHover={{ scale: 1.0}} whileTap={{scale: 0.9}} className="navbar_links_div_text_div"><Link onClick={() => { dispatch(setChange()) }} href="/cv">{language === "german" ? "Lebenslauf" : "CV"}</Link></motion.div>
+                        <motion.div whileHover={{ scale: 1.0}} whileTap={{scale: 0.9}} className="navbar_links_div_text_div"><Link onClick={() => { dispatch(setChange()) }} href="/blog">{language === "german" ? "Blog" : "Blog"}</Link></motion.div>
+                        <motion.div whileHover={{ scale: 1.0}} whileTap={{scale: 0.9}} className="navbar_links_div_text_div"><Link onClick={() => { dispatch(setChange()) }} href="/contact">{language === "german" ? "Kontakt" : "Contact"}</Link></motion.div>
                     </div>
                 </motion.div>
                  )}

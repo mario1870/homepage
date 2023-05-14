@@ -29,7 +29,7 @@ export default function Blog_featured_article(props){
             <div className="blog_page_featured_article_box"  style={{ backgroundColor: "white", borderRadius: "2rem"}}>
                 <div className="skeleton_layout" style={{ height:"30rem", borderRadius: "2rem", width:"95vw", height: "100%"}}>
                     <div className="blog_page_featured_article_image">
-                        <Image src="/google.webp" className="skeleton_image" width={1200} height={1200} />
+                        <Image src="/google.webp" className="skeleton_image" width={1200} height={1200} alt="Reload please :D" />
                     </div>
                     <div className="blog_page_featured_article_textbox" >
                         <div className="skeleton_textbox" >

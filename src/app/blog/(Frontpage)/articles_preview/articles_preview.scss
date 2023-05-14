@@ -39,16 +39,42 @@
     height: 100%;
     border-radius: 1rem;
     padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .blog_page_all_articles_article_headline{
     text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    padding: 0.5rem;
+    width: 100%;
+    color: black;
 }
 
 .blog_page_all_articles_article_span_p{   
-    padding-top: 1rem;
-    text-align: center;
+    text-align: left;
+    line-height: 30px;
+    height: calc(5 * 30px);
+    overflow: hidden;
+    position: relative;
+    font-size: larger;
+    color: black;
 }
+
+.blog_page_all_articles_article_span_p::after{   
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 30px;
+    width: 75%;
+    background: linear-gradient(
+        90deg, transparent, white
+    );
+}
+
 
 .blog_page_all_articles_article_spanimg{   
     width: 60%;
@@ -121,6 +147,7 @@
         width: 100vw;
         display: flex;
         justify-content: center;
+        margin-top: 0;
     }
     
     
@@ -153,9 +180,35 @@
         padding: 1rem;
     }
     
-    .blog_page_all_articles_article_span_p{   
-        padding-top: 1rem;
+
+    .blog_page_all_articles_article_headline{
         text-align: center;
+        font-size: larger;
+        font-weight: bold;
+        padding: 0.2rem;
+        width: 100%;
+    }
+    
+    .blog_page_all_articles_article_span_p{   
+        text-align: left;
+        line-height: 30px;
+        height: calc(5 * 30px);
+        overflow: hidden;
+        position: relative;
+        font-size: medium;
+    
+    }
+    
+    .blog_page_all_articles_article_span_p::after{   
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 30px;
+        width: 100%;
+        background: linear-gradient(
+            90deg, transparent, white
+        );
     }
 
     .blog_page_all_articles_article_spanimg{   
@@ -163,6 +216,8 @@
         height: 100%;
         border-radius: 1rem;
         padding: 1rem;
+        display: flex;
+        align-items: center;
     }
     
     .blog_page_all_articles_article:hover{

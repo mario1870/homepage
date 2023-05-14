@@ -5,26 +5,14 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useState } from "react";
 import { contact_data } from "../../../data/contact_data"
 import { motion } from "framer-motion";
+import { BsFillTelephoneFill } from 'react-icons/bs';
+import { AiOutlineMail } from 'react-icons/ai';
+import Link from "next/link";
 
 export default function Contact(){
 
     const language = useSelector(state => state.language.value);
 
-    const deutsch_text = (
-        <>
-          {contact_data.text_deutsch.email}
-          <br />
-          {contact_data.text_deutsch.telefon}
-        </>
-      );
-
-    const english_text = (
-        <>
-          {contact_data.text_english.email}
-          <br />
-          {contact_data.text_english.telefon}
-        </>
-      );
 
 
 
@@ -33,7 +21,8 @@ export default function Contact(){
             <div className="contact_page">
                 <div className="contact_page_box">
                     <div className="contact_page_left">
-                        <p>{language === "german" ? deutsch_text : english_text}</p>
+                        <div style={{ width: "100%", display: "flex", flexDirection: "row"}}><Link href="#" style={{ width: "100%", display: "flex", flexDirection: "row", alignItems: "center"}}><BsFillTelephoneFill /><p style={{padding:"1rem"}}>01520 9748732</p></Link></div>
+                        <div style={{ width: "100%", display: "flex", flexDirection: "row"}}><Link href="mailto:marioraach01@gmail.com" style={{ width: "100%", display: "flex", flexDirection: "row", alignItems: "center"}}><AiOutlineMail /><p style={{padding:"1rem"}}>marioraach01@gmail.com</p></Link></div>
                     </div>
                     <div className="contact_page_right">
                         <div>
@@ -51,3 +40,5 @@ export default function Contact(){
         </>
     )
 }
+
+

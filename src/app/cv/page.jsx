@@ -19,7 +19,7 @@ export default function Cv_page(){
             <div className="cv_page">
 
             <div className="button">
-                <a href="/greece.pdf" download>Download</a>
+                <a className="button_download" href="/greece.pdf" download>Download</a>
                 <p className="top">Klicke zum downloaden</p>
                 <p className="bottom">204KB</p>
             </div>
