@@ -1,8 +1,6 @@
-
-
 import "./../blog_singlepage.scss"
 import { useSelector, useDispatch } from 'react-redux';
-import Submitbutton from "../submitbutton"
+import CommentForm from "../comment_form";
 
 interface Post {
     id: number;
@@ -15,6 +13,7 @@ interface Post {
   interface Props {
     params: { id: number };
   }
+
 
   export default async function Page({ params }: Props) {
     const blogposts: Post[] = await fetch("http://localhost:3000/api/get_blogposts").then(
@@ -37,10 +36,8 @@ interface Post {
             <div className="comment_section">
               <div>
                 <h2>Kommentar hinzufügen</h2>
-                <form action="http://localhost:8000/formular" method="post">
-                  <textarea className="comment_textbox" placeholder="Write here..." />
-                  <Submitbutton />
-                </form>
+
+                <CommentForm />
               </div>
             </div>
 

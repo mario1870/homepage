@@ -18,6 +18,10 @@
     height: auto;
     min-height: 30rem;
     border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .blogpost_title{
@@ -59,8 +63,6 @@
     margin: 2rem;
     padding: 2rem;
     font-size: large;
-}
-
-.comment_submit{
 
 }
+
