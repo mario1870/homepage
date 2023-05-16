@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Image from "next/image";
 import Article_preview_skeleton from "./(loadingUI)/article_preview_skeleton"
 import "./articles_preview.scss"
-import LoadMoreButton from "../(load_more_button)/load_more"
+import LoadMoreButton from "../components/(load_more_button)/load_more"
 import Link from "next/link";
 
 

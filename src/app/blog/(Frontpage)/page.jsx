@@ -1,8 +1,8 @@
 "use client"
 import "./blog.scss"
 import { useSelector, useDispatch } from 'react-redux';
-import Blog_featured_article from "./(featured_article)/blog_featured_article"
-import FollowMe from "./follow_me_section"
+import Blog_featured_article from "./components/(featured_article)/blog_featured_article"
+import FollowMe from "./components/(featured_article)/follow_me_section"
 import Articles_preview from "./articles_preview/articles_preview"
 import Footer from "../../components/footer/footer"
 

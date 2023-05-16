@@ -23,6 +23,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/components/navbar/hamburgermenu/hamburgermenu.jsx", "src/app/components/navbar/mobile_menu/mobile_menu.jsx", "src/app/cv/page.jsx", "src/app/contact/page.jsx", "src/app/blog/(Frontpage)/page.jsx", "data/startpage_data.js", "src/app/api/hello/route.js", "src/app/components/buttons.jsx", "src/app/layout.tsx", "src/app/api/auth/[...nextauth]/route.js", "src/app/blog/blogposts/[id]/page.tsx", "src/app/blog/articles_preview/loading.jsx", "src/app/components/navbar/navbar.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/components/navbar/hamburgermenu/hamburgermenu.jsx", "src/app/components/navbar/mobile_menu/mobile_menu.jsx", "src/app/cv/page.jsx", "src/app/contact/page.jsx", "src/app/blog/(Frontpage)/page.jsx", "data/startpage_data.js", "src/app/api/hello/route.js", "src/app/components/buttons.jsx", "src/app/layout.tsx", "src/app/api/auth/[...nextauth]/route.ts", "src/app/blog/blogposts/[id]/page.tsx", "src/app/blog/articles_preview/loading.jsx", "src/app/components/navbar/navbar.jsx"],
   "exclude": ["node_modules"]
 }

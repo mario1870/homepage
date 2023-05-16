@@ -1,7 +1,7 @@
 
 
 import { NextRequest, NextResponse } from "next/server";
-import { prisma } from "../../../../../../lib/prisma";
+import { prisma } from "../../../../../lib/prisma";
 import { useRouter } from "next/router";
 
 export async function POST(request: Request) {
@@ -11,9 +11,9 @@ export async function POST(request: Request) {
 
     const newComment= await prisma.comment.create({
       data: {
-        content: res.content,
+        content: res.comment,
         authorId: res.authorId,
-        blogpostId: 12303,
+        blogpostId: res.headers.referer,
       },
     });
 

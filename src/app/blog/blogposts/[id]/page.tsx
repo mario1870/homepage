@@ -1,6 +1,6 @@
-import "./../blog_singlepage.scss"
+import "./blog_singlepage.scss"
 import { useSelector, useDispatch } from 'react-redux';
-import CommentForm from "../comment_form";
+import CommentForm from "./comment_form";
 
 interface Post {
     id: number;
@@ -19,6 +19,8 @@ interface Post {
     const blogposts: Post[] = await fetch("http://localhost:3000/api/get_blogposts").then(
       (res) => res.json()
     );
+
+    console.log(blogposts)
   
     const blogpost = blogposts.find((post) => post.id === Number(params.id));
 
@@ -35,15 +37,14 @@ interface Post {
 
             <div className="comment_section">
               <div>
-                <h2>Kommentar hinzufügen</h2>
-
+                <h2 className="add_comment_label">Kommentar hinzufügen</h2>
                 <CommentForm />
               </div>
             </div>
 
           </div>
         ) : (
-          <h1 style={{ color: "white"}}>Blogpost nicht gefunden</h1>
+          <h1 style={{ color: "white"}}>Blogpost nicht gefunden: {blogpost}</h1>
         )}
 
       </div>

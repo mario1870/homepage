@@ -3,7 +3,6 @@ import "./startpage.scss"
 import Image from "next/image"
 import { startpage_data } from "../../../data/startpage_data"
 import { useSelector, useDispatch } from 'react-redux';
-import TypewriterText from "../components/animations/schreibmaschine"
 import { motion } from "framer-motion"
 import Link from "next/link";
 import Typewriter from "./typewriter"

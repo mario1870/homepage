@@ -1,5 +1,6 @@
 "use client"
-
+import Button from '@mui/material/Button';
+import SendIcon from '@mui/icons-material/Send';
 
 export default function CommentForm(){
 
@@ -10,7 +11,7 @@ export default function CommentForm(){
         const formData = new FormData(e.currentTarget);
     
         const body = {
-          content: formData.get('comment'),
+          comment: formData.get('comment'),
           authorId: 3,
         };
     
@@ -19,6 +20,7 @@ export default function CommentForm(){
           body: JSON.stringify(body),
           headers: {
             'Content-Type': 'application/json',
+              Referer: window.location.href
           },
         });
         
@@ -26,9 +28,12 @@ export default function CommentForm(){
       };
     
     return(
-      <form onSubmit={addComment} method="POST">
-        <textarea name="comment" className="comment_textbox" placeholder="Write here..." />
-        <input type="submit" />
+      <form onSubmit={addComment} method="POST" style={{ display: "flex", flexDirection: "column", padding: "2rem"}}>
+        <textarea name="comment" className="comment_textbox" placeholder="Write here..." style={{width: "100%"}} />
+        <Button variant="contained" endIcon={<SendIcon />} style={{ marginTop: "0rem", width: "100%", borderRadius: "0 0 2rem 2rem" }}>
+          Send
+        </Button>
       </form>
+
     )
 }
