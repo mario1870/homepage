@@ -4,7 +4,6 @@ import { useState, useEffect } from "react"
 import Image from "next/image";
 import Article_preview_skeleton from "./(loadingUI)/article_preview_skeleton"
 import "./articles_preview.scss"
-import LoadMoreButton from "../components/(load_more_button)/load_more"
 import Link from "next/link";
 
 
@@ -38,21 +37,23 @@ export default function Articles_preview(){
   return(
     <>
     {isLoading ? (<Article_preview_skeleton />) : (
-      <div className="blog_page_all_articles">
+      <div className="w-screen flex justify-center mt-0">
         <div className="blog_page_all_articles_box">
 
 
         {data.slice(-shownArticles).reverse().map((item, index) => (
-          <Link href={"/blog/blogposts/" + item.id} key={index}>
-            <div  className="blog_page_all_articles_article">
-              <span className="blog_page_all_articles_article_span">
-                <h3 className="blog_page_all_articles_article_headline">{item.title}</h3>
-                <p className="blog_page_all_articles_article_span_p">{item.content}</p>              
-              </span>
-
-              <span className="blog_page_all_articles_article_spanimg">
+          <Link href={"/blog/blogposts/" + item.id} key={index} className="w-full">
+            <div  className="bg-white h-fit rounded-2xl flex justify-between flex-col md:flex-row-reverse min-w-min mx-3 hover:shadow hover:shadow-white">
+              
+            <span className="w-full h-full rounded-2xl p-5">
                 <Image className="blog_page_all_articles_box_image" src="/coming_soon.jpg" width={100} height={100} alt={item.title} />
               </span>
+
+              <span className="w-full h-full rounded-2xl px-10 pb-5 flex flex-col md:pt-5">
+                <h3 className="text-center text-xl font-bold py-2 w-full text-black">{item.title}</h3>
+                <p className="text-center leading-7 h-28 overflow-hidden relative text-lg text-black" id="blog_page_all_articles_article_span_p">{item.content}</p>              
+              </span>
+
             </div>
           </Link>
         ))}
@@ -62,7 +63,9 @@ export default function Articles_preview(){
     )}
     
     <div className="blog_page_all_articles_loadingbutton"> 
-      <LoadMoreButton onClick={() => setShownArticles(shownArticles + 4)} />
+      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+        Mehr laden
+      </button>
     </div>  
     </>
   )

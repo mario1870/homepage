@@ -26,6 +26,7 @@ interface Post {
 
   
     return (
+      <>
       <div className="page">
         {blogpost ? (
           <div className="blogpost_box">
@@ -48,6 +49,7 @@ interface Post {
         )}
 
       </div>
+      </>
     );
   }
   

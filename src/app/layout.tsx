@@ -5,11 +5,12 @@ import { Provider } from 'react-redux'
 import { store } from "./redux/store"
 import { SkeletonTheme } from "react-loading-skeleton";
 
+{/** 
 export const metadata = {
   title: 'Personal Website - Mario Raach',
   description: 'Personal Webiste of Mario Raach from Germany',
 }
-
+*/}
 
 export default function RootLayout(
   { children }: { children: React.ReactNode }
