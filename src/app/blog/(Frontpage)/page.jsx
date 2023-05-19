@@ -18,7 +18,7 @@ export default function Blog(){
                 <div className="blog_page_header">
                     <div className="blog_page_header_box"> 
                         <div className="blog_page_header_firstline text-black dark:text-white"><p>{language === "german" ? "MEIN BLOG" : "MY BLOG"}</p><FollowMe /></div>
-                        <div className="blog_page_header_headline text-black dark:text-white">HEADLINE</div>
+                        <div className="blog_page_header_headline text-black dark:text-white">WELCOME TO MY BLOG</div>
                         <div className="blog_page_header_subheadline text-black dark:text-white">SUBHEADLINE</div>
                     </div>
                 </div>
