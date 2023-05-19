@@ -9,7 +9,11 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      filter: {
+        'invert': 'invert(100%)',
+      }
+    },
   },
   plugins: [],
 }

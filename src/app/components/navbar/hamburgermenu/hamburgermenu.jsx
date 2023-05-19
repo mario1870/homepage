@@ -11,14 +11,7 @@ export default function Hamburgermenu(props){
     const language = useSelector(state => state.language.value);
     const dispatch = useDispatch();
 
-    const hamburgerState = useSelector(state => state.hamburger.value);
 
-    {/* Zustand wird definiert, ob der Hamburgertoggle aktiv ist */}
-    const [isChecked, setIsChecked] = useState(false);
-    const handleCheckboxChange = () => {
-        setIsChecked(!isChecked);
-      };
-      
 
     const lang = props.lang
     const inc= props.incrementLanguage
@@ -29,8 +22,8 @@ export default function Hamburgermenu(props){
             <div id='hamburgerm'>
               <input type="checkbox" id="hamburg" onChange={() => { dispatch(setChange()) }}  />
               <label htmlFor="hamburg" className="hamburg">
-                  <span className="line" id="line1"></span>
-                  <span className="line" id="line2"></span>
+                  <span className="line bg-black dark:bg-white" id="line1"></span>
+                  <span className="line bg-black dark:bg-white" id="line2"></span>
               </label>
             </div>
 

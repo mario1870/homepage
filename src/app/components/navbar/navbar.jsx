@@ -18,15 +18,13 @@ export default function Navbar(props){
     
     const hamburgerState = useSelector(state => state.hamburger.value);
     
-    const navbar_links = {}
-    
     return(
-        <motion.nav className="navbar">
+        <motion.nav className="fixed top-0 h-20 w-full flex justify-between items-center px-4 z-10 bg-blue-200 md:bg-transparent dark:bg-black">
 
             {/*Logo*/}
             <div className="navbar_logo_div">
                 <motion.div whileHover={{ scale: 1.1}} whileTap={{scale: 0.9}} id="navbar_logo_id">
-                    <Link className="" href="" id="navbar_logo_id" ><Image src="/navbar_images/m_logo.png" width={592} height={421} alt="logo" id="navbar_logo_id" loading="lazy" /></Link>
+                    <Link className="" href="" id="navbar_logo_id" ><Image src="/navbar_images/m_logo.png" className="filter dark:invert" width={100} height={100} alt="logo" id="navbar_logo_id" loading="lazy" /></Link>
                 </motion.div>
             </div>
 

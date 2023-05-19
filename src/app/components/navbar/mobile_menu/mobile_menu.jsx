@@ -36,12 +36,12 @@ export default function Mobile_menu(props){
 
     return(
 
-        <motion.div id="mobile_menu" initial={{ x: "100vw" }} animate={{ x: hamburgerState ? 0 : "100vw" }} transition={{ duration: 0.4, ease: "easeInOut",}}>
-            <div id="mobile_menu_links">
-              <Link onClick={() => { dispatch(setChange()) }} className="" href="">{language === "german" ? "Start" : "Home"}</Link>
-              <Link  onClick={() => { dispatch(setChange()) }} href="/cv">{language === "german" ? "Lebenslauf" : "CV"}</Link>
-              <Link onClick={() => { dispatch(setChange()) }} href="/blog">{language === "german" ? "Blog" : "Blog"}</Link>
-              <Link onClick={() => { dispatch(setChange()) }} href="/contact">{language === "german" ? "Kontakt" : "Contact"}</Link>         
+        <motion.div id="mobile_menu" className="w-screen mt-20 bg-blue-200 dark:bg-black" initial={{ x: "100vw" }} animate={{ x: hamburgerState ? 0 : "100vw" }} transition={{ duration: 0.4, ease: "easeInOut",}}>
+            <div id="mobile_menu_links" className="text-black dark:text-white">
+              <Link onClick={() => { dispatch(setChange()) }} className="no-underline text-black dark:text-white" href="/">{language === "german" ? "Start" : "Home"}</Link>
+              <Link onClick={() => { dispatch(setChange()) }} className="no-underline text-black dark:text-white" href="/cv">{language === "german" ? "Lebenslauf" : "CV"}</Link>
+              <Link onClick={() => { dispatch(setChange()) }} className="no-underline text-black dark:text-white" href="/blog">{language === "german" ? "Blog" : "Blog"}</Link>
+              <Link onClick={() => { dispatch(setChange()) }} className="no-underline text-black dark:text-white" href="/contact">{language === "german" ? "Kontakt" : "Contact"}</Link>         
             </div>
 
             <div id="div_login_small">

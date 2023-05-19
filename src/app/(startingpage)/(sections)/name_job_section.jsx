@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export default function NameJobSection(){
     return (
-        <div className="md:h-3/5 bg-white dark:bg-gray-800 pb-10">
+        <div className="md:h-2/4 bg-white dark:bg-gray-800 pb-10 md:pb-0">
             <h1 className="w-full text-6xl your-element p-10 pt-20 text-center md:text-left dark:text-white">Mario Raach</h1>
             <h3 className="w-full text-3xl px-10 text-center md:text-left font-semibold dark:text-white">Industriekaufmann &<br/>Software Developer</h3>
 

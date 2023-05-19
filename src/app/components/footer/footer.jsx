@@ -18,10 +18,10 @@ export default function Footer(){
 
             <div className="flex justify-center space-x-5">
                 <motion.a whileHover={{ scale: 1.1}} whileTap={{scale: 0.9}} href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                    <Image style={{ filter: 'invert(100%)' }} width={icon_dimensions} height={icon_dimensions} alt="LinkedIn" src="/icons/linkedin.png" />
+                    <Image className="filter dark:invert" width={icon_dimensions} height={icon_dimensions} alt="LinkedIn" src="/icons/linkedin.png" />
                 </motion.a>
                 <motion.a whileHover={{ scale: 1.1}} whileTap={{scale: 0.9}} href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                    <Image style={{ filter: 'invert(100%)' }} width={icon_dimensions} height={icon_dimensions} src="/icons/github.png" />
+                    <Image className="filter dark:invert" width={icon_dimensions} height={icon_dimensions} src="/icons/github.png" />
                 </motion.a>
             </div>
                 <p className="text-center text-gray-700 font-medium">&copy; 2023 Raach GmbH All rights reservered.</p>

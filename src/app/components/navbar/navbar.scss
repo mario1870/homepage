@@ -1,18 +1,6 @@
 
 
-.navbar{
-    position: fixed;
-    top: 0;
-    height: 5rem;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 0.5rem;
-    z-index: 10;
-    background-color: rgb(0, 0, 0);
-}
+
 
 .navbar_logo_div{
     height: 100%;
@@ -24,7 +12,6 @@
 #navbar_logo_id{
     width: auto;
     height: 80%;
-    filter: invert(100%);
 }
 
 .navbar_links_div{

@@ -14,12 +14,12 @@ export default function Blog(){
 
     return (
         <>
-            <div className="blog_page">
+            <div className="blog_page bg-blue-200 dark:bg-black">
                 <div className="blog_page_header">
                     <div className="blog_page_header_box"> 
-                        <div className="blog_page_header_firstline"><p>{language === "german" ? "MEIN BLOG" : "MY BLOG"}</p><FollowMe /></div>
-                        <div className="blog_page_header_headline">HEADLINE</div>
-                        <div className="blog_page_header_subheadline">SUBHEADLINE</div>
+                        <div className="blog_page_header_firstline text-black dark:text-white"><p>{language === "german" ? "MEIN BLOG" : "MY BLOG"}</p><FollowMe /></div>
+                        <div className="blog_page_header_headline text-black dark:text-white">HEADLINE</div>
+                        <div className="blog_page_header_subheadline text-black dark:text-white">SUBHEADLINE</div>
                     </div>
                 </div>
                 <Blog_featured_article headline="HEAD" />
