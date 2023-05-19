@@ -5,7 +5,7 @@ import Image from "next/image";
 import Article_preview_skeleton from "./(loadingUI)/article_preview_skeleton"
 import "./articles_preview.scss"
 import Link from "next/link";
-
+import Dropdown from "./dropdown"
 
 export default function Articles_preview(){
 
@@ -38,8 +38,9 @@ export default function Articles_preview(){
     <>
     {isLoading ? (<Article_preview_skeleton />) : (
       <div className="w-screen flex justify-center mt-0">
-        <div className="blog_page_all_articles_box">
+        <div className="blog_page_all_articles_box mt-20">
 
+        <Dropdown />
 
         {data.slice(-shownArticles).reverse().map((item, index) => (
           <Link href={"/blog/blogposts/" + item.id} key={index} className="w-full">

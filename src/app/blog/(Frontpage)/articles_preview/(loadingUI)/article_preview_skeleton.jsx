@@ -5,11 +5,11 @@ import "react-loading-skeleton/dist/skeleton.css";
 const Article_preview_skeleton = ({ amount }) => {
 
   return (
-    <div className="blog_page_all_articles">
-        <div className="blog_page_all_articles_box">
+    <div className="w-screen flex justify-center mt-0">
+        <div className="blog_page_all_articles_box mt-20">
 
         {Array.from({length: 6}).map((_, index) => (
-        <div key={index} className="blog_page_all_articles_article" style={{ display: "flex", justifyContent: "space-between", padding: "1rem"}}>
+        <div key={index} className="bg-white" style={{ display: "flex", justifyContent: "space-between", padding: "1rem"}}>
             <div style={{ width: "40%", paddingTop: "1.2rem", paddingLeft: "1rem", paddingRight: "1rem"}}>
                 <Skeleton  width={"100%"} height={"1.2rem"} count={5} style={{ display:"flex", margin: "auto"}}/>
             </div>
