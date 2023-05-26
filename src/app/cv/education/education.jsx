@@ -14,7 +14,7 @@ export default function Education(){
             <div className="cv_page_education_center">
 
             
-                <Education_section header={language === "german" ? "Grundschule" : "Elementary school"} side="100" />
+                <Education_section header={language === "german" ? "Grundschulezzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz" : "Elementary school"} side="100" />
                 <Education_section header={language === "german" ? "Gymnasium" : "Highschool"} side="-100" />
                 <Education_section header={language === "german" ? "Abitur" : "A-levels"} side="100" />
                 <Education_section header={language === "german" ? "Berufsschule" : "Vocational school"} side="-200" />
